@@ -1,0 +1,14 @@
+<h1>Tarefas</h1>
+<hr>
+
+<button type="button" class="btn btn-success mb-2 p-4" [routerLink]="['/new']">Nova Tarefa</button>
+<section>
+  <div *ngIf="tasks.length == 0" class="alert alert-warning" role="alert">
+    Nenhuma tarefa cadastrada.
+  </div>
+  <ul class="list-group" *ngIf="tasks.length > 0">
+    <li class="list-group-item" *ngFor="let task of tasks">
+      <app-task-list-item [task]='task' class="task-item"></app-task-list-item>
+    </li>
+  </ul>
+</section>

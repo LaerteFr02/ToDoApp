@@ -1,0 +1,13 @@
+<h2>{{ title }}</h2>
+<hr/>
+
+<section id='form'>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label style="font-size: 20px; color:blue">Descrição</label>
+       <!-- Usei o Two  Way Data Bind --> <textarea [(ngModel)]="task.description" name="description" rows="5" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary m-2 p-4">Salvar</button>
+    <button type="button" class="btn btn-secondary m-2 p-4" [routerLink]="['']">Cancelar</button>
+  </form>
+</section>
